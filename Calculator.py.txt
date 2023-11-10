@@ -1,0 +1,54 @@
+# Jacob Terry
+# CS 135
+# 10-2-23
+
+import math 
+
+#  standard operation functions
+def add(a,b):
+   return a + b
+def sub(a,b):
+   return a - b
+def multi(a,b):
+   return a * b
+def divi(a,b):
+   return a / b
+
+
+while True:
+# sin, cosin, and square root (sqrt)
+   operator = input("Enter the operation: +,-,*,/,sin,cos,sqrt,quit")
+   if operator == "quit":
+     break
+   elif operator == "sin":
+     x = float(input("Enter a number: "))
+     value = math.sin(x)
+     print(f"{operator}{x} = {value}")
+   elif operator == "cos":
+     x = float(input("Enter a number: "))
+     value = math.cos(x)
+     print(f"{operator}{x} = {value}")
+   elif operator == "sqrt":
+     x = float(input("Enter a number: "))
+     value = math.sqrt(x)
+     print(f"{operator}{x} = {value}")
+   else:
+# standard operations +,-,*,/
+     a = float(input("Enter the first number: "))
+     b = float(input("Enter the second number: "))
+   if operator == "+":
+      value = add(a,b)
+      print(f"{a} {operator} {b} = {value}")
+   elif operator == "-":
+      value = sub(a,b)
+      print(f"{a} {operator} {b} = {value}")
+   elif operator == "*":
+      value = multi(a,b)
+      print(f"{a} {operator} {b} = {value}")
+   elif operator == "/" and b!=0:
+      # the b!=0 prevents error
+      value = divi(a,b)
+      print(f"{a} {operator} {b} = {value}")
+   else:
+      print("Enter a valid operator or number.")
+
